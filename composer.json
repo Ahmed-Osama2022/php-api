@@ -19,13 +19,10 @@
     ],
     "scripts": {
         "post-install-cmd": [
-            "php -r \"if (!file_exists('.env')) { copy('.env.example', '.env'); }\""
+            "php post-install.php"
         ],
         "post-create-project-cmd": [
-            "php -r \"if (!file_exists('.env')) { copy('.env.example', '.env'); }\""
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "php post-install.php"
         ]
     },
     "require": {
