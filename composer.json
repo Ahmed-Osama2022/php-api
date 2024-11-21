@@ -18,12 +18,6 @@
         }
     ],
     "scripts": {
-        "post-install-cmd": [
-            "php post-install.php"
-        ],
-        "post-create-project-cmd": [
-            "php post-install.php"
-        ],
         "post-root-package-install": [
            "php post-install.php"
         ]
