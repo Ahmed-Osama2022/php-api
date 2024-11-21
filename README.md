@@ -36,8 +36,12 @@ DB_PASS=
 
 ### How to work with?
 #### NOTE: This library uses ```MVC``` in the structure.
-- Define all your routes as explained in the ```src/Router.php``` file.
+#### NOTE: This project uses ```psr-4 autoloader``` for the ```src``` and ```App``` folder.
 
 - Put all your credintials for the database in the ```.env``` file.
 
-- 
+- Define all your routes as explained in the ```src/Router.php``` file.
+
+- You will see an example in the files to tell you How to use it fine.
+
+- Start making the logic of your application as contrllers you defined in the ```App/controllers``` folder.
