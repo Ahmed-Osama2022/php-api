@@ -1,5 +1,8 @@
 {
     "name": "ahmedosama/php-api",
+    "description": "Make an API for your application using PHP",
+    "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "src\\": "src/",
@@ -8,7 +11,7 @@
     },
     "authors": [
         {
-            "name": "ahmed-osama2022",
+            "name": "Ahmed Osama Khashaba",
             "email": "ahmadosama.2011@gmail.com"
         }
     ],
