@@ -38,7 +38,7 @@ DB_PASS=
 #### NOTE: This library uses ```MVC``` in the structure.
 #### NOTE: This project uses ```psr-4 autoloader``` for the ```src``` and ```App``` folder.
 
-- Put all your credintials for the database in the ```.env``` file.
+- Put all your credentials for the database in the ```.env``` file.
 
 - Define all your routes as explained in the ```src/Router.php``` file.
 
