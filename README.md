@@ -2,7 +2,7 @@
 - This is a simple php-api project to make an API for your application using PHP native.
 
 ## REQUIRMENTS
-- PHP v7.4 or higher.
+- PHP v8.0 or higher.
 - composer
 
 ## Download and install 
