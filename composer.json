@@ -1,7 +1,8 @@
 {
     "name": "ahmedosama/php-api",
     "description": "Make an API for your application using PHP",
-    "type": "library",
+    "type": "project",
+    "keywords": ["api", "php", "php-api", "rest-api", "react-php", "apis", "php8"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -12,7 +13,8 @@
     "authors": [
         {
             "name": "Ahmed Osama Khashaba",
-            "email": "ahmadosama.2011@gmail.com"
+            "email": "ahmadosama.2011@gmail.com",
+             "homepage": "https://github.com/Ahmed-Osama2022"
         }
     ],
     "require": {
