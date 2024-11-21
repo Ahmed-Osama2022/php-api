@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework\Middleware;
+namespace src\Middleware;
 
-use Framework\Session;
+use src\Session;
 
 class Authorize
 {

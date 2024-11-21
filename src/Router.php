@@ -1,9 +1,9 @@
 <?php
 
-namespace Framework;
+namespace src;
 
 use App\controllers\ErrorController;
-use Framework\Middleware\Authorize;
+use src\Middleware\Authorize;
 
 class Router
 {

@@ -2,7 +2,7 @@
 
 namespace App\controllers;
 
-use Framework\Database;
+use src\Database;
 
 class HomeController
 {

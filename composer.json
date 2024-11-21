@@ -2,7 +2,7 @@
     "name": "ahmedosama/php-api",
     "autoload": {
         "psr-4": {
-            "Framework\\": "Framework/",
+            "src\\": "src/",
             "App\\": "App/"
         }
     },

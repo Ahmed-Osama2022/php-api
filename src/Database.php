@@ -6,7 +6,7 @@
  * In order for "psr-4" autoloader to work
  */
 
-namespace Framework;
+namespace src;
 
 use PDO;
 use PDOException;

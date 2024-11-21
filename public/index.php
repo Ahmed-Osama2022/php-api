@@ -1,13 +1,13 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Framework\Session;
+use src\Session;
 
 Session::start();
 
 require '../helpers.php';
 
-use Framework\Router;
+use src\Router;
 
 // echo "Hello world!";
 

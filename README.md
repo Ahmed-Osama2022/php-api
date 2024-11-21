@@ -32,3 +32,12 @@ DB_PASS=
 - If you start serving the project you should see this welcome page at your serving link.
 
 ![Welcome screen](./php-api-welcome-page.png)
+
+
+### How to work with?
+#### NOTE: This library uses ```MVC``` in the structure.
+- Define all your routes as explained in the ```src/Router.php``` file.
+
+- Put all your credintials for the database in the ```.env``` file.
+
+- 
