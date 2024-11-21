@@ -20,6 +20,9 @@
     "scripts": {
         "post-root-package-install": [
             "php post-install.php"
+        ],
+        "post-create-project-cmd": [
+          "php post-install.php"
         ]
     },
     "require": {
