@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * This file is responsible for just loading the config of the database.
+ * NOTE: It uses "Dotenv" and surely looking for "/.env" file in the root folder.
+ */
+
 use Dotenv\Dotenv;
 
 // Load .env file

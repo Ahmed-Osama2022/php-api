@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * This file is resposible for dealing with Session at the server-side.
+ * It also contains a flash messages you could use it later to send it to the client.
+ */
+
 namespace src;
 
 class Session
@@ -104,6 +109,4 @@ class Session
     self::clear('flash_' . $key);
     return $message;
   }
-
-  // 
 }

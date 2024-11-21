@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file is resposible for handling the errors.
+ * You can add more if you like, and use it later.
+ */
 
 namespace App\controllers;
 

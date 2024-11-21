@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This middleware file is used later in your "routes.php" file as following:
+ * $router->get('/', 'HomeController@index', ['guest']);
+ * 
+ * You can add roles here as possible as you can
+ * Now it just made for 'guest' and 'auth'
+ * 
+ */
+
 namespace src\Middleware;
 
 use src\Session;

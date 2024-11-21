@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * This file is resposible for dealing with the database.
+ * It is configured for "MySQL", and you can change it if you want.
  * NOTE: 
  * You have to spicify the namespace here 
  * In order for "psr-4" autoloader to work
@@ -29,8 +31,10 @@ class Database
     $options = [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-      // OR => for a object notation >> usign it later as "$listing->title"
-      // PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+      /**
+     * Or => for a object notation >> PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+     * usign it later as => e.g. "$data->id
+     */
     ];
 
 

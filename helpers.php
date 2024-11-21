@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is made to simplify usage for the developer.
+ * This file contains 'helper function' in order to use it later in any file you want in the whole APP.
+ * It will import in "public/index.php" file.
+ */
+
+
 use App\controllers\ErrorController;
 
 /**
@@ -24,7 +31,7 @@ function inspect($value)
 }
 
 /**
- * Inspect a value and kill the whole code after it
+ * Inspect a value and KILL the whole code after it
  * To check your code while you're working...
  */
 function inspectAndDie($value)
@@ -35,7 +42,7 @@ function inspectAndDie($value)
   die();
 }
 /**
- * Load a view
+ * Load a View
  */
 
 function loadView($name, $data = [])

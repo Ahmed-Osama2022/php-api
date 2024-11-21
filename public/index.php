@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * This is the main file responsible to start the App.
+ */
 require __DIR__ . '/../vendor/autoload.php';
 
 use src\Session;

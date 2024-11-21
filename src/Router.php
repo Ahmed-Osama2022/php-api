@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * This file is resposible for creating the routes of your APP.
+ * it later hanles the requests from "routes.php" file.
+ * It's made for handling "CRUD" operations, and you can add more if you like
+ */
+
 namespace src;
 
 use App\controllers\ErrorController;
@@ -24,7 +30,7 @@ class Router
 
   /**
    * @methods 
-   * 
+   * NOTE: Add more if you like
    */
   public function get($uri, $controller, $middleware)
   {
@@ -53,6 +59,10 @@ class Router
   {
     $requestMethod = $_SERVER['REQUEST_METHOD'];
 
+    /**
+     * NOTE: This next function is made to handle the "DELETE" && "PUT" requests;
+     * beacuse you can't make a <form></form> in your HTML with these!
+     */
     // NOTE: Check for _method input 
     if ($requestMethod === 'POST' && isset($_POST['_method'])) {
       // Override the request method with the value of _method
