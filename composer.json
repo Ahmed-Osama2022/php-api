@@ -19,10 +19,12 @@
     ],
     "scripts": {
         "post-install-cmd": [
-            "php -r \"if (!file_exists('.env')) { copy('.env.example', '.env'); }\""
+            "php -r \"if (!file_exists('.env')) { copy('.env.example', '.env'); }\"",
+            "php -r \"if (is_dir('screenshots')) { rmdir('screenshots'); }\""
         ],
         "post-create-project-cmd": [
-            "php -r \"if (!file_exists('.env')) { copy('.env.example', '.env'); }\""
+            "php -r \"if (!file_exists('.env')) { copy('.env.example', '.env'); }\"",
+            "php -r \"if (is_dir('screenshots')) { rmdir('screenshots'); }\""
         ]
     },
     "require": {

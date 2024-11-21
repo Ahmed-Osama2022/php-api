@@ -32,9 +32,9 @@ DB_PASS=
 - If you start serving the project you should see this welcome page at your serving link.
 
 - Welcome Page
-![Welcome screen](./php-api-welcome-page.png)
+![Welcome screen](./screenshots/php-api-welcome-page.png)
 - Test route
-![Test route](./php-api-test-route.png)
+![Test route](./screenshots/php-api-test-route.png)
 
 
 ### How to work with?
