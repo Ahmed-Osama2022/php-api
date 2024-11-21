@@ -19,8 +19,7 @@
     ],
     "scripts": {
         "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "php -r \"if (is_dir('screenshots')) { array_map('unlink', array_filter((array)glob('screenshots/*'))); rmdir('screenshots'); }\""
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     },
     "require": {
