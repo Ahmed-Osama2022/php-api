@@ -1,0 +1,18 @@
+{
+    "name": "ahmedosama/php-api",
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahmed-osama2022",
+            "email": "ahmadosama.2011@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
