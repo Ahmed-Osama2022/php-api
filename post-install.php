@@ -1,4 +1,5 @@
 <?php
+echo "\n\nHello form php-api";
 if (!file_exists('.env')) {
   copy('.env.example', '.env');
 }
