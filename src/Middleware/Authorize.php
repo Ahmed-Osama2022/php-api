@@ -11,6 +11,8 @@
 
 namespace src\Middleware;
 
+use App\controllers\ErrorController;
+use src\Auth_token;
 use src\Session;
 
 class Authorize
@@ -19,10 +21,39 @@ class Authorize
    * Check if the user authinticated
    * @return bool
    */
-  public function isAuthenticated()
+  public function hasSession()
   {
-    return Session::has('user');
+
+    if (Session::has('user')) {
+      $token = Session::get('user');
+      $tokenVer = (new Auth_token())->decodeToken($token);
+
+      return $tokenVer; //bool
+    }
+
+
+    return false;
+    // return Session::has('user');
   }
+
+  public function isAuth()
+  {
+    if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+      $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
+    } elseif (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) { // Fallback for some configurations
+      $authHeader = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
+    }
+
+    if (isset($authHeader) && preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
+      $token = $matches[1]; // Extract the token
+      $tokenVer = (new Auth_token())->decodeToken($token); // Verify the token
+      return $tokenVer; //bool
+    } else {
+      return false;
+      // exit;
+    }
+  }
+
   /**
    * Handle the user's requests
    * @param string $role
@@ -30,10 +61,17 @@ class Authorize
    */
   public function handle($role)
   {
-    if ($role === 'guest' && $this->isAuthenticated()) {
+    if ($role === 'guest' && $this->hasSession()) {
       return redirect('/');
-    } elseif ($role === 'auth' && !$this->isAuthenticated()) {
-      return redirect('/auth/login');
+    } elseif ($role === 'auth' && !$this->hasSession()) {
+      // return redirect('/api/login');
+      ErrorController::unauthorized();
+      exit;
+    } elseif ($role === 'admin' && !$this->isAuth()) {
+      http_response_code(401);
+      // return redirect('/api/login');
+      ErrorController::unauthorized();
+      exit;
     }
   }
 }
